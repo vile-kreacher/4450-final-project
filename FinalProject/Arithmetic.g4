@@ -13,7 +13,10 @@ statement: assignment
          | arithmetic_operation
          | array_declaration
          | variable_declaration
-         | if_statement;
+         | if_statement
+         | while_loop
+         | for_loop
+         | comment;
 
 assignment: ID '=' expression;
 
@@ -31,6 +34,10 @@ elif_statement: 'elif' ( '(' condition ')' | condition ) ':' statement+;
 
 else_statement: 'else' ':' statement+;
 
+while_loop: 'while' ( '(' condition ')' | condition ) ':' statement+;
+
+for_loop: 'for' ID 'in' expression ':' statement+;
+
 condition: and_condition;
 
 and_condition: or_condition (('and'|'or') or_condition)*;
@@ -46,6 +53,12 @@ factor: INT | FLOAT | STRING | ID | '(' expression ')';
 arith_op: ADD | SUB | MUL | DIV | MOD;
 
 relational_op: '<' | '<=' | '>' | '>=' | '==' | '!=' | 'and' | 'or' | 'not';
+
+comment: (single_line_comment | multi_line_comment);
+
+single_line_comment: '#'+ (.)*?;
+
+multi_line_comment: ('"""' | '\'\'\'' ) .*? ('"""' | '\'\'\'' );
 
 ADD: '+';
 SUB: '-';

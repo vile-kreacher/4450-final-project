@@ -98,6 +98,24 @@ class ArithmeticListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by ArithmeticParser#while_loop.
+    def enterWhile_loop(self, ctx:ArithmeticParser.While_loopContext):
+        pass
+
+    # Exit a parse tree produced by ArithmeticParser#while_loop.
+    def exitWhile_loop(self, ctx:ArithmeticParser.While_loopContext):
+        pass
+
+
+    # Enter a parse tree produced by ArithmeticParser#for_loop.
+    def enterFor_loop(self, ctx:ArithmeticParser.For_loopContext):
+        pass
+
+    # Exit a parse tree produced by ArithmeticParser#for_loop.
+    def exitFor_loop(self, ctx:ArithmeticParser.For_loopContext):
+        pass
+
+
     # Enter a parse tree produced by ArithmeticParser#condition.
     def enterCondition(self, ctx:ArithmeticParser.ConditionContext):
         pass
@@ -167,6 +185,33 @@ class ArithmeticListener(ParseTreeListener):
 
     # Exit a parse tree produced by ArithmeticParser#relational_op.
     def exitRelational_op(self, ctx:ArithmeticParser.Relational_opContext):
+        pass
+
+
+    # Enter a parse tree produced by ArithmeticParser#comment.
+    def enterComment(self, ctx:ArithmeticParser.CommentContext):
+        pass
+
+    # Exit a parse tree produced by ArithmeticParser#comment.
+    def exitComment(self, ctx:ArithmeticParser.CommentContext):
+        pass
+
+
+    # Enter a parse tree produced by ArithmeticParser#single_line_comment.
+    def enterSingle_line_comment(self, ctx:ArithmeticParser.Single_line_commentContext):
+        pass
+
+    # Exit a parse tree produced by ArithmeticParser#single_line_comment.
+    def exitSingle_line_comment(self, ctx:ArithmeticParser.Single_line_commentContext):
+        pass
+
+
+    # Enter a parse tree produced by ArithmeticParser#multi_line_comment.
+    def enterMulti_line_comment(self, ctx:ArithmeticParser.Multi_line_commentContext):
+        pass
+
+    # Exit a parse tree produced by ArithmeticParser#multi_line_comment.
+    def exitMulti_line_comment(self, ctx:ArithmeticParser.Multi_line_commentContext):
         pass
 
 
